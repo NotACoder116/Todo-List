@@ -1,0 +1,11 @@
+<div *ngFor="let todo of todoDetailsList">
+    <p>
+        <input
+        (change)="onToggle(todo)"
+        type="checkbox"
+        [checked]="todo.completed"
+      />
+      {{ todo.title }}
+    </p> 
+</div>
+<router-outlet></router-outlet>
