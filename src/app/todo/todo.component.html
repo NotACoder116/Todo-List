@@ -1,11 +1,11 @@
-<div *ngFor="let todo of todoDetailsList">
-    <p>
-        <input
-        (change)="onToggle(todo)"
-        type="checkbox"
-        [checked]="todo.completed"
-      />
-      {{ todo.title }}
-    </p> 
+<div class="mt-4" *ngIf="todoDetailsList.length">
+  <app-todos-items
+  *ngFor="let todo of todoDetailsList; let indexOfelement=index;"
+  [todoDetailsList]="todoDetailsList"
+  [todo]="todo"
+  [indexOfelement]="indexOfelement"></app-todos-items>
 </div>
-<router-outlet></router-outlet>
+<div *ngIf="!todoDetailsList.length" class="d-flex justify-content-center align-items-center flex-column mt-4">
+  <img src="../../assets/images/no-data-available.png">
+  <h3>No data available!</h3>
+</div>

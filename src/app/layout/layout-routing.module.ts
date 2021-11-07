@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { LayoutResolverService } from './layout-resolver.service';
+import { PostsAuthGuard } from '../auth/posts-auth.guard';
+import { LayoutResolverService } from './layout-resolver.service';
 import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
@@ -14,6 +15,11 @@ const routes: Routes = [
       {
         path: 'todo',
         loadChildren: () => import('../todo/todo.module').then(m => m.TodoModule)
+      },
+      {
+        path: 'posts',
+        canActivate: [PostsAuthGuard],
+        loadChildren: () => import('../posts/posts.module').then(m => m.PostsModule),
       }
     ]
   }

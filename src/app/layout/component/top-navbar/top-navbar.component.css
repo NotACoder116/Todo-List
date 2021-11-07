@@ -1,0 +1,41 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: auto;
+    align-items:center;
+    margin: 0 2rem  0 2rem;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.color-wt {
+    color: white !important
+}
+
+.navbar {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    background-color: #666;
+    border-radius: 8px;
+    border: none;
+}
+
+.navbar-nav {
+    align-items: center;
+}

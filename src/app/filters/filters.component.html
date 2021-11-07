@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-end mt-4 mr-4">
+    <div class="filter-container">
+        <div *ngFor="let filter of filtersType | keyvalue" [ngClass]="selectedFilterValue == filter.value ? 'selected-fliter-bg' : ''" (click)="selectedFilter(filter)">
+            <div [ngClass]="selectedFilterValue == filter.value ? 'selected-fliter' : ''">{{filter.key}}</div>
+        </div>
+    </div>
+</div>

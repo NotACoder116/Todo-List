@@ -1,0 +1,7 @@
+<div class="list-container" [ngClass]="todo.completed ? 'is-complete' : 'not-complete'">
+    <div class="font-size-18">
+        <input class="cursor-pointer" (change)="onToggle(todo, indexOfelement)" type="checkbox"
+            [checked]="todo.completed" />
+        {{ todo.title }}
+    </div>
+</div>

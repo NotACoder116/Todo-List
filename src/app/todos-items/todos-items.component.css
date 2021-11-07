@@ -1,0 +1,23 @@
+.is-complete {
+    color: green;
+}
+
+.not-complete {
+    color: red;
+}
+
+.list-container {
+    background: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+}
+
+.font-size-18 {
+    font-size: 18px;
+    padding: 0 16px 0 16px;
+    margin-bottom: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -15,9 +15,4 @@ export class TodoService {
   getTodos() {
     return this.http.get(`${this.todoUrl + this.todosLimit}`);
   }
-
-  toggleCompleted(todo: any) {
-    const url = `${this.todoUrl}/${todo.id}`;
-    return this.http.put(url, todo, httpOptions);
-  }
 }

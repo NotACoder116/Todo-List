@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light">
+    <div class="navbar-container mr-4 ml-4">
+        <div>
+            <a class="navbar-brand" routerLink="/app/posts">Posts</a>
+            <a class="navbar-brand" routerLink="/app/todo">Todo List<span class="ml-1">({{currentCounter}})</span></a>
+        </div>
+        <div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active mr-1 text-decoration-underline" (click)="navigateToWebsite(userDetails.website)">{{userDetails.name}}</a><span>({{userDetails.company.name}})</span>
+                <button  type="button" class="logout-btn ml-4">
+                    <a class="nav-item nav-link color-wt p-0" (click)="logout()">Logout</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

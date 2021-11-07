@@ -1,0 +1,22 @@
+.filter-container {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 60px;
+}
+
+.filter-container div {
+    padding: 2px 10px 2px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.selected-fliter-bg {
+    background-color: #e1f5ed;
+}
+
+.selected-fliter {
+    color: #2caa94;
+    border-radius: 5px;
+}

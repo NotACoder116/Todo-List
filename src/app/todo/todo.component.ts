@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { map } from 'rxjs/operators';
+import { SharedService } from '../shared/shared.service';
 import { TodoService } from './todo.service';
 
 @Component({
@@ -7,25 +10,13 @@ import { TodoService } from './todo.service';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-
   todoDetailsList: any;
-  constructor(private todoService: TodoService) { }
+  notCompletedCounter: number = 0;
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
-    this.todoService.getTodos().subscribe((todos) => {
+    this.sharedService._filteredList.subscribe((todos) => {
       this.todoDetailsList = todos;
-      console.log(this.todoDetailsList)
-    });
+    })
   }
-  onToggle(todo: any) {
-    //toggle in UI
-    todo.completed = !todo.completed;
-    //toogle in devServerTarget
-    this.todoService
-      .toggleCompleted(todo)
-      .subscribe((todo) => console.log(todo));
-  }
-
-  
-
 }
